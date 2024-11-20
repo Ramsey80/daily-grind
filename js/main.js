@@ -100,7 +100,17 @@ switch(myDay){
 	break;
 
 	default:
-		today: "Something went wrong";
+		today = "Something went wrong";
 }
 
 console.log(coffee);
+
+document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
+
+function coffeeTemplate(coffee){
+	let myReturn = `<p>
+	<img src="${coffee.pic}" alt="${coffee.alt}" id="" />
+   <strong class="feature" >${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s Coffee Special is ${coffee.type}<strong class="feature">${coffee.type}</strong>${coffee.desc}
+</p> `;
+	return myReturn;	
+}
