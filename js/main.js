@@ -28,10 +28,14 @@ let coffee = "";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-if(urlParams.has('day')){//Use querry string
+if(urlParams.has('day')){
+	//Use querry string to pull from previous day loadouts
+	// Allows you to click on the day of the week in the nav panel to swap to a different day of the week
     myDay = urlParams.get('day');
     myDay = parseInt(myDay);
-}else{//Use date object
+}else{
+	//Use date object to set the website to current day
+	// Sets the default day to the current day of the week when you first open the site.
     myDay = myDate.getDay();
 }
 
@@ -120,12 +124,15 @@ switch(myDay){
 
 console.log(coffee);
 
+// allows line 68 div to get the information and change coffee types
 document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
+// changes the background of the site according to the color within the coffee switche
+document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
 
 function coffeeTemplate(coffee){
 	let myReturn = `<p>
 	<img src="${coffee.pic}" alt="${coffee.alt}" id="" />
-   <strong class="feature" >${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s Coffee Special is ${coffee.type}.<strong class="feature"></strong> ${coffee.desc}
+   <p></p><strong class="feature" >${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s Coffee Special is ${coffee.type}.<strong class="feature"></strong> ${coffee.desc}
 </p> `;
 	return myReturn;	
 }
