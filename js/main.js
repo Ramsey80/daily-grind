@@ -15,10 +15,25 @@
 	Desc - A paragraph or two of content that describes the daily content
 
 */
+
+// Set the dates variables
 let myDate = new Date();
+// pull which day of the week it is 0 = sunday 6 = saturday
 myDay = myDate.getDay();
+// set variables for today and coffee
 let today = "";
 let coffee = "";
+
+//working with query strings https://www.sitepoint.com/get-url-parameters-with-javascript/
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+if(urlParams.has('day')){//Use querry string
+    myDay = urlParams.get('day');
+    myDay = parseInt(myDay);
+}else{//Use date object
+    myDay = myDate.getDay();
+}
 
 switch(myDay){
 	case 0:
@@ -114,3 +129,4 @@ function coffeeTemplate(coffee){
 </p> `;
 	return myReturn;	
 }
+

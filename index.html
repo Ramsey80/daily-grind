@@ -27,7 +27,7 @@
 		}
 	
 		#coffee {
-			float:left;
+			float:none;
 			display:inline-block;
 			padding:20px;
 			max-width:300px; /* best if actual size of image */
@@ -44,21 +44,27 @@
      <![endif]-->
 </head>
 <body>
+	
 	<header>
-	    <img src="images/largebucks-logo.jpg" alt="You drink our coffee, we make large bucks!" class="flexible" id="logo" />
+	    <img src="images/largebucks-logo.png" alt="You drink our coffee, we make large bucks!" class="flexible" id="logo" />
 		<h1 class="masthead">LARGEBUCK$ COFFEE</h1>
+		<header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
+		
 		<nav>
+			<h3>Coffee Specials of the Day!</h3>
 			<ul>
-				<li><a href="#">Sample Link</a></li>
-                <li><a href="#">Sample Link</a></li>
-                <li><a href="#">Sample Link</a></li>
-                <li><a href="#">Sample Link</a></li>
-                <li><a href="#">Sample Link</a></li>
+				<li><a href="?day=0">Sunday</a></li>
+                <li><a href="?day=1">Monday</a></li>
+                <li><a href="?day=2">Tuesday</a></li>
+                <li><a href="?day=3">Wednesday</a></li>
+                <li><a href="?day=4">Thursday</a></li>
+				<li><a href="?day=5">Friday</a></li>
+				<li><a href="?day=6">Saturday</a></li>
 			</ul>
 		</nav>
 	</header>
     <main>
-		 <header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
+		 
 		 <div id="coffee-cup"></div>
 		 <!--
 		 
@@ -85,8 +91,8 @@
 		</p>
      </main>
 	 <footer>
-		<p><small>&copy; 2022 by 
-			YOUR NAME HERE, All Rights Reserved ~ 
+		<p><small>&copy; 2024 by 
+			Ramsey Mell, All Rights Reserved ~ 
 			<a id="html-checker" href="#">Check HTML</a> ~ 
 			<a id="css-checker" href="#">Check CSS</a></small>
 	   </p>
