@@ -124,11 +124,12 @@ switch(myDay){
 
 console.log(coffee);
 
+
 // allows line 68 div to get the information and change coffee types
 document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
 // changes the background of the site according to the color within the coffee switche
 document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
-
+//document.queryString("html").style.backgroundColor = coffee.color;
 function coffeeTemplate(coffee){
 	let myReturn = `<p>
 	<img src="${coffee.pic}" alt="${coffee.alt}" id="" />
